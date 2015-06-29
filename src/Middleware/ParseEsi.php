@@ -1,6 +1,7 @@
 <?php namespace Barryvdh\HttpCache\Middleware;
 
 use Closure;
+use Request;
 use Symfony\Component\HttpKernel\HttpCache\Esi;
 use Illuminate\Contracts\Routing\Middleware as MiddlewareInterface;
 
