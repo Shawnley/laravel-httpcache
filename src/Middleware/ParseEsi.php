@@ -24,7 +24,7 @@ class ParseEsi implements MiddlewareInterface
      */
     public function handle($request, Closure $next)
     {
-        $response = $next($request);
+        $response = $next(Request::createFromBase($request));
 
         if (!is_null($this->esi)) {
             $this->esi->addSurrogateControl($response);
